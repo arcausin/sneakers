@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <h1 class="text-dark">Django Crud</h1>
+                <a href="/crud/create"><button type="button" class="btn btn-success mb-3">Ajouter</button></a>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" data-page-length='-1'>
+                  <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                        <th>Text</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for data in dataset %}
+                    <tr>
+                        <td><a href="/crud/detail/{{ data.id }}">{{ data.text }}</a></td>
+                        <td>{{ data.date }}</td>
+                        <td><a href="/crud/update/{{ data.id }}"><button type="button" class="btn btn-primary">Modifier</button></a> <a href="/crud/delete/{{ data.id }}"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

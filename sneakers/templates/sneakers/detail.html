@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/media/site_web/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>{{ data.name }} | Sneakers</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-3"><a href="/sneakers/" class="text-dark" style="text-decoration: none;">Sneakers</a></h1>
+        
+        <div class="row mt-5">
+            <div class="col-8">
+                <img class="img-fluid" src="/media/{{ data.image }}" alt="">
+            </div>
+            <div class="col-4">
+                <h2 class="mb-5">{{ data.name }}</h2>
+                <p class="text-justify mb-5">{{ data.description }}</p>
+                <button type="button" class="btn btn-primary">Acheter</button>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
