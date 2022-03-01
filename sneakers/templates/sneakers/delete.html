@@ -8,21 +8,23 @@
     <title>Supprimer | {{ data.name }} | Sneakers</title>
 </head>
 <body>
-    <div class="main">
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/media/{{ data.image }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{ data.name }}</h5>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-12 text-center mt-3 mb-5"><a href="/sneakers/" class="text-dark" style="text-decoration: none;">Sneakers</a></h1>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/media/{{ data.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ data.name }}</h5>
+                </div>
             </div>
+              
+            <form method="POST" class="col-12 mt-5">
+                {% csrf_token %}
+                
+                Voulez vous vraiment supprimer cette sneakers ?<br/>
+                <input type="submit" value="Oui" />
+            </form>
         </div>
-          
-        <form method="POST">
-            
-            Voulez vous vraiment supprimer cette sneakers ?<br/>
-            <input type="submit" value="Oui" />
-            <a href="/sneakers/">Annuler</a>
-        </form>
     </div>
 </body>
 </html>

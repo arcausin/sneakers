@@ -8,10 +8,17 @@
     <title>Ajouter une sneakers | Sneakers</title>
 </head>
 <body>
-    <form method = "post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-12 text-center mt-3 mb-5"><a href="/sneakers/" class="text-dark" style="text-decoration: none;">Sneakers</a></h1>
+            <form method="post" enctype="multipart/form-data" class="col-12 mt-5">
+                <div class="form-group">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-success">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

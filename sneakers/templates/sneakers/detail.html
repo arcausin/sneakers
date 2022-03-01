@@ -18,7 +18,10 @@
             <div class="col-4">
                 <h2 class="mb-5">{{ data.name }}</h2>
                 <p class="text-justify mb-5">{{ data.description }}</p>
-                <button type="button" class="btn btn-primary">Acheter</button>
+                <p class="mb-5">{{ data.quantity }} unité(s) en stock</p>
+                <a href="/sneakers/detail/{{ data.id }}" class="btn btn-success">Acheter</a>
+                <a href="/sneakers/update/{{ data.id }}" class="btn btn-primary">Modifier</a>
+                <a href="/sneakers/delete/{{ data.id }}" class="btn btn-danger">Supprimer</a>
             </div>
         </div>
       </div>
